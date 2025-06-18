@@ -33,7 +33,7 @@
 <body>
   <div class="container">
     <h1>Alphabetical Article Sorter</h1>
-    <ul id="band"></ul>
+    <ul id="bands"></ul>
   </div>
 
   <script>
@@ -52,7 +52,7 @@
       return stripArticle(a).localeCompare(stripArticle(b));
     });
 
-    const ul = document.getElementById('band');
+    const ul = document.getElementById('bands'); // ✅ corrected ID
     sortedBands.forEach(band => {
       const li = document.createElement('li');
       li.textContent = band;
